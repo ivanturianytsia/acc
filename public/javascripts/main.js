@@ -11,7 +11,7 @@ function handleOrientation(event) {
     var beta = Math.floor(event.beta);
     var gamma = Math.floor(event.gamma);
     window.requestAnimationFrame(function() {
-        if (Math.abs(gamma) > 20) {
+        if (Math.abs(gamma) > 5) {
             console.log("emitting");
             socket.emit("move", {
                 clockwise: (gamma > 0),
