@@ -2,7 +2,9 @@ var socket = io.connect();
 socket.on('connect', function() {
     socket.on('disconnect', function() {});
     socket.on('avalible', function(data) {
-        document.getElementById("loading").style.display = "none";
+        if (data) {
+            document.getElementById("loading").style.display = "none";
+        }
     });
 })
 
