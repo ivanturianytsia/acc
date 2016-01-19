@@ -17,6 +17,7 @@ socket.on('connect', function() {
         if (data) {
             window.requestAnimationFrame(function() {
                 document.getElementById("loading").style.display = "none";
+                window.addEventListener("deviceorientation", handleOrientation, true);
             });
         } else {
             help.say("Sorry.", "But another device is connected right now. Try later.");
@@ -31,9 +32,8 @@ function handleOrientation(event) {
     window.requestAnimationFrame(function() {
         if (Math.abs(gamma) > 5) {
             console.log("emitting");
-            socket.emit("move", {
-                clockwise: (gamma > 0),
-                speed: gamma
+            socket.emit("gamma", {
+                gamma: gamma
             })
         }
         document.getElementById("alpha").style.width = (alpha / 2) + "px";
@@ -43,6 +43,4 @@ function handleOrientation(event) {
         document.getElementById("beta").innerHTML = beta;
         document.getElementById("gamma").innerHTML = gamma;
     });
-    // Do stuff with the new orientation data
 }
-window.addEventListener("deviceorientation", handleOrientation, true);
