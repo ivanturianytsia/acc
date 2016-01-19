@@ -1,4 +1,4 @@
-var help {
+var help = {
     say: function(title, body) {
         window.requestAnimationFrame(function() {
             document.getElementById("loading").style.display = "inline";
