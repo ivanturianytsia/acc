@@ -3,7 +3,9 @@ socket.on('connect', function() {
     socket.on('disconnect', function() {});
     socket.on('avalible', function(data) {
         if (data) {
-            document.getElementById("loading").style.display = "none";
+            window.requestAnimationFrame(function() {
+                document.getElementById("loading").style.display = "none";
+            });
         }
     });
 })
