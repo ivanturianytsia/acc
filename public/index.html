@@ -11,10 +11,24 @@
     <script src="javascripts/main.js"></script>
 </head>
 
-<body class="container">
-    <div id="alpha" class="box red"></div>
-    <div id="beta" class="box green"></div>
-    <div id="gamma" class="box blue"></div>
+<body>
+    <div class="loading">
+        <div class="loading-message">
+            <h3>Loading...</h3>
+            <p>Please wait</p>
+        </div>
+    </div>
+    <div class="loading" ng-show="loading">
+        <div class="loading-message">
+            <h3>Loading...</h3>
+            <p>Please wait</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="alpha" class="box red"></div>
+        <div id="beta" class="box green"></div>
+        <div id="gamma" class="box blue"></div>
+    </div>
 </body>
 
 </html>

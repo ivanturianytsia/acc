@@ -23,3 +23,18 @@ a {
 .blue {
     background-color: Blue
 }
+.loading {
+	text-align: center;
+	margin:0px;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	z-index: 5;
+}
+.loading-message {
+	color:white;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
