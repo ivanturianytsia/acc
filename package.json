@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./bin/www"
+        "start": "STEP_TIME=10 STEP_PIN1=40 STEP_PIN2=38 STEP_PIN3=36 STEP_PIN4=32 node ./bin/www"
     },
     "dependencies": {
         "body-parser": "~1.13.2",
